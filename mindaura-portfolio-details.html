@@ -44,42 +44,20 @@
     <div class="header-container d-flex flex-column align-items-start">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-          <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i> Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         </ul>
       </nav>
 
       <div class="social-links text-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/dineth-cs" target="_blank" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/dineth-hasaranga-92506a308?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/message/S5SGA63VVDMFN1" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
       </div>
-
     </div>
-
   </header>
 
   <main class="main">
@@ -104,7 +82,27 @@
 
         <div class="row gy-4">
 
+          <!-- Slider එක -->
           <div class="col-lg-8">
+            
+            <style>
+              .mobile-app-img {
+                max-height: 550px !important;
+                width: auto !important;
+                max-width: 100%;
+                object-fit: contain !important;
+                margin: 0 auto; 
+                display: block;
+                border-radius: 15px; 
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* පින්තූරෙ වටේට ලස්සනට Shadow එකක් */
+              }
+              .portfolio-details-slider .swiper-slide {
+                width: 100% !important; /* Slide එක සම්පූර්ණ පළල ගන්නවා */
+                text-align: center;
+                padding-bottom: 50px; 
+              }
+            </style>
+
             <div class="portfolio-details-slider swiper init-swiper">
 
               <script type="application/json" class="swiper-config">
@@ -112,9 +110,9 @@
                   "loop": true,
                   "speed": 600,
                   "autoplay": {
-                    "delay": 5000
+                    "delay": 3000
                   },
-                  "slidesPerView": "auto",
+                  "slidesPerView": 1, 
                   "pagination": {
                     "el": ".swiper-pagination",
                     "type": "bullets",
@@ -123,81 +121,96 @@
                 }
               </script>
 
-              <div class="swiper-wrapper align-items-center">
-
+              <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-1.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
+                  <img src="assets/img/portfolio/mindaura/mindaura-1.jpg" alt="MindAura Screenshot 1" class="mobile-app-img" loading="lazy">
                 </div>
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-10.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
+                  <img src="assets/img/portfolio/mindaura/mindaura-2.jpg" alt="MindAura Screenshot 2" class="mobile-app-img" loading="lazy">
                 </div>
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-7.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
+                  <img src="assets/img/portfolio/mindaura/mindaura-3.jpg" alt="MindAura Screenshot 3" class="mobile-app-img" loading="lazy">
                 </div>
-
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mindaura/mindaura-5.jpg" alt="MindAura Screenshot 4" class="mobile-app-img" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mindaura/mindaura-4.jpg" alt="MindAura Screenshot 5" class="mobile-app-img" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mindaura/mindaura-6.jpg" alt="MindAura Screenshot 5" class="mobile-app-img" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mindaura/mindaura-7.jpg" alt="MindAura Screenshot 5" class="mobile-app-img" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mindaura/mindaura-8.jpg" alt="MindAura Screenshot 5" class="mobile-app-img" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mindaura/mindaura-9.jpg" alt="MindAura Screenshot 5" class="mobile-app-img" loading="lazy">
+                </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
-
+      
+          <!-- Project Information කොටුව -->
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-left" data-aos-delay="200">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Web Development</li>
-                <li><strong>Client</strong>: Victoria Technologies</li>
-                <li><strong>Project date</strong>: 01 March, 2024</li>
-                <li><strong>Project URL</strong>: <a href="#" target="_blank">www.example.com</a></li>
+                <li><strong>Category</strong>: AI & Mobile App Development</li>
+                <li><strong>Client</strong>: Academic Prototype</li>
+                <li><strong>Tech Stack</strong>: React Native, Python (FastAPI), TensorFlow, PyTorch, MongoDB</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/dineth-cs/MINDAURA.git" target="_blank">github.com/dineth-cs</a></li>
               </ul>
             </div>
           </div>
 
+          <!-- Project Overview & Features -->
           <div class="col-lg-12">
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Project Overview</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-              <p>
-                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
+                MindAura is an advanced mobile personal assistant designed to identify user emotional states through multimodal AI. Operating seamlessly across text, voice, and video inputs, it serves as a comprehensive lifestyle and health companion for proactive mental wellness.
               </p>
 
               <div class="features mt-4">
                 <h3>Key Features</h3>
                 <div class="row gy-3">
+                  
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-                      <i class="bi bi-check-circle-fill"></i>
-                      <h4>Responsive Design</h4>
-                      <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                      <i class="bi bi-robot"></i>
+                      <h4>Multimodal AI Analysis</h4>
+                      <p>Utilizes Convolutional Neural Networks (CNN) for precise facial analysis and Transformer models for accurate text sentiment processing.</p>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
-                      <i class="bi bi-shield-check"></i>
-                      <h4>Advanced Security</h4>
-                      <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                      <i class="bi bi-shield-lock"></i>
+                      <h4>Advanced Privacy & Security</h4>
+                      <p>Implements AES-256 encryption for data records and a strict "process-and-discard" architecture for all biometric inputs to ensure complete privacy.</p>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
-                      <i class="bi bi-graph-up"></i>
-                      <h4>Performance Optimization</h4>
-                      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                      <i class="bi bi-phone"></i>
+                      <h4>Cross-Platform UI</h4>
+                      <p>Developed utilizing React Native to deliver a smooth, intuitive mobile experience featuring interactive dashboards and mood calendars.</p>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
-                      <i class="bi bi-gear"></i>
-                      <h4>Easy Integration</h4>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                      <i class="bi bi-award"></i>
+                      <h4>Gamification & Scalability</h4>
+                      <p>Incorporates psychological hooks including achievement badges and a streak system to boost daily engagement. The robust backend architecture supports up to 1,000 concurrent users.</p>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -212,22 +225,17 @@
   </main>
 
   <footer id="footer" class="footer position-relative">
-
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Dineth Hasaranga</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+        Designed by <a href="#">Dineth Hasaranga</a>
       </div>
     </div>
-
   </footer>
 
+  
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

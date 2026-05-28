@@ -19,37 +19,37 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #1f1f1f; /* Background color for the entire website, including individual sections */
+  --background-color: #000000; /* Solid black background */
   --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ececec; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #232323; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #310606; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --accent-color: #00E676; /* Neon green accent */
+  --surface-color: #0a0a0a; /* Near-black surface for cards and boxed elements */
+  --contrast-color: #000000; /* Black contrast for text on neon green backgrounds */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(236, 236, 236, 0.59);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #393939; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #393939; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ececec; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(180, 255, 210, 0.70);  /* Soft green nav link color */
+  --nav-hover-color: #00E676; /* Neon green on hover/active */
+  --nav-mobile-background-color: #000000; /* Pure black mobile nav background */
+  --nav-dropdown-background-color: #0a0a0a; /* Near-black dropdown background */
+  --nav-dropdown-color: #ffffff; /* White dropdown text */
+  --nav-dropdown-hover-color: #00E676; /* Neon green dropdown hover */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #2c2c2c;
-  --surface-color: #323232;
+  --background-color: #000000;
+  --surface-color: #080808;
 }
 
 .dark-background {
-  --background-color: #040b14;
+  --background-color: #000000;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #151f2b;
-  --contrast-color: #ffffff;
+  --surface-color: #080808;
+  --contrast-color: #000000;
 }
 
 /* Smooth scroll */
@@ -143,8 +143,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #1b1b1b;
-  --contrast-color: #444444;
+  --background-color: #000000;
+  --contrast-color: #000000;
   color: var(--default-color);
   position: fixed;
   top: 0;
@@ -184,8 +184,10 @@ h6 {
 }
 
 .header .social-links a:hover {
-  color: var(--contrast-color);
+  color: #000000;
   background: var(--accent-color);
+  box-shadow: 0 0 12px 3px rgba(0, 230, 118, 0.7), 0 0 24px 6px rgba(0, 230, 118, 0.35);
+  transform: translateY(-2px);
 }
 
 @media (min-width: 1200px) {
@@ -294,12 +296,14 @@ h6 {
 .navmenu .active,
 .navmenu .active:focus {
   color: var(--nav-hover-color);
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.8), 0 0 18px rgba(0, 230, 118, 0.4);
 }
 
 .navmenu a:hover .navicon,
 .navmenu .active .navicon,
 .navmenu .active:focus .navicon {
   color: var(--accent-color);
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.9);
 }
 
 .navmenu .active .toggle-dropdown,
@@ -702,10 +706,10 @@ section,
 }
 
 .hero .social-links a:hover {
-  color: var(--contrast-color);
+  color: #000000;
   background-color: var(--accent-color);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 0 14px 4px rgba(0, 230, 118, 0.75), 0 0 30px 8px rgba(0, 230, 118, 0.35);
 }
 
 .hero .hero-visual {
@@ -1632,7 +1636,7 @@ section,
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: var(--contrast-color);
+  color: #ffffff;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -1643,7 +1647,7 @@ section,
 }
 
 .portfolio .portfolio-wrap .portfolio-info .portfolio-links a {
-  color: var(--contrast-color);
+  color: #ffffff;
   width: 40px;
   height: 40px;
   display: flex;
@@ -1657,11 +1661,14 @@ section,
 
 .portfolio .portfolio-wrap .portfolio-info .portfolio-links a:hover {
   background-color: var(--accent-color);
+  color: #000000;
   transform: translateY(-3px);
+  box-shadow: 0 0 10px 3px rgba(0, 230, 118, 0.7);
 }
 
 .portfolio .portfolio-wrap:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 20px 4px rgba(0, 230, 118, 0.55), 0 0 40px 8px rgba(0, 230, 118, 0.25);
 }
 
 .portfolio .portfolio-wrap:hover img {
@@ -2076,15 +2083,22 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-box {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: #0a0a0a;
+  color: #e0e0e0;
   padding: 3rem;
   border-radius: 1rem;
   height: 100%;
+  border: 1px solid rgba(0, 230, 118, 0.15);
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.contact .info-box:hover {
+  box-shadow: 0 0 22px 5px rgba(0, 230, 118, 0.45), 0 0 45px 10px rgba(0, 230, 118, 0.18);
+  border-color: rgba(0, 230, 118, 0.45);
 }
 
 .contact .info-box h3 {
-  color: var(--contrast-color);
+  color: #ffffff;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -2096,12 +2110,19 @@ section,
 }
 
 .contact .info-box p {
-  opacity: 0.8;
+  color: #b0b0b0;
+  opacity: 1;
   margin-bottom: 2rem;
 }
 
 .contact .info-box a {
-  color: var(--contrast-color);
+  color: #00E676;
+  transition: text-shadow 0.25s ease, color 0.25s ease;
+}
+
+.contact .info-box a:hover {
+  color: #00E676;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.75);
 }
 
 @media (max-width: 992px) {
@@ -2123,32 +2144,35 @@ section,
 .contact .info-item .icon-box {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  background-color: rgba(0, 230, 118, 0.10);
+  border: 1px solid rgba(0, 230, 118, 0.25);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact .info-item .icon-box i {
   font-size: 1.5rem;
-  color: var(--contrast-color);
+  color: #00E676;
 }
 
 .contact .info-item:hover .icon-box {
-  background-color: color-mix(in srgb, var(--contrast-color), transparent 70%);
+  background-color: rgba(0, 230, 118, 0.20);
+  box-shadow: 0 0 10px 3px rgba(0, 230, 118, 0.50);
 }
 
 .contact .info-item .content h4 {
-  color: var(--contrast-color);
+  color: #ffffff;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .contact .info-item .content p {
+  color: #b0b0b0;
   margin-bottom: 0.25rem;
   font-size: 0.95rem;
 }
@@ -2548,3 +2572,226 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Dark Hacker Theme — Global Overrides (#00E676 Mint Green)
+--------------------------------------------------------------*/
+
+/* ── Force solid black on every structural element ── */
+html, body {
+  background-color: #000000 !important;
+}
+
+header, .header, .header .header-container {
+  background-color: #000000 !important;
+  border-color: rgba(0, 230, 118, 0.15) !important;
+}
+
+footer, .footer {
+  background-color: #000000 !important;
+}
+
+section, .section, main, .main {
+  background-color: #000000 !important;
+}
+
+.page-title,
+.page-title.dark-background {
+  background-color: #000000 !important;
+}
+
+/* ── Text readability ── */
+body, p, li, td, span:not(.category):not(.badge-text):not(.stat-number) {
+  color: #e0e0e0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+/* ── Mint green accent on key inline elements ── */
+.category,
+.accent-color,
+.stat-number,
+.skill-percentage,
+.resume .resume-section h3 i,
+.resume .resume-section .resume-item h5,
+.portfolio .portfolio-filters li.filter-active,
+.about .profile-content .profession {
+  color: #00E676 !important;
+}
+
+/* ── All links: mint on hover with soft glow ── */
+a:hover {
+  color: #00E676 !important;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.75) !important;
+}
+
+/* ── Navigation links ── */
+.navmenu a {
+  color: rgba(180, 255, 210, 0.75) !important;
+  transition: color 0.25s, text-shadow 0.25s;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: #00E676 !important;
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.80), 0 0 22px rgba(0, 230, 118, 0.40) !important;
+}
+
+.navmenu a .navicon {
+  color: rgba(0, 230, 118, 0.60);
+}
+
+.navmenu a:hover .navicon,
+.navmenu .active .navicon {
+  color: #00E676 !important;
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.90) !important;
+}
+
+/* ── Sidebar social icon buttons ── */
+.header .social-links a {
+  background: rgba(0, 230, 118, 0.08) !important;
+  border: 1px solid rgba(0, 230, 118, 0.20);
+  color: #00E676 !important;
+  transition: all 0.3s ease;
+}
+
+.header .social-links a:hover {
+  background: #00E676 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 14px 4px rgba(0, 230, 118, 0.70), 0 0 28px 8px rgba(0, 230, 118, 0.30) !important;
+  transform: translateY(-2px);
+}
+
+/* ── Hero section social icons ── */
+.hero .social-links a {
+  background-color: rgba(0, 230, 118, 0.08) !important;
+  color: #00E676 !important;
+  border: 1px solid rgba(0, 230, 118, 0.20);
+}
+
+.hero .social-links a:hover {
+  background-color: #00E676 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 14px 4px rgba(0, 230, 118, 0.75), 0 0 32px 8px rgba(0, 230, 118, 0.35) !important;
+}
+
+/* ── Buttons: primary ── */
+.btn-primary,
+.hero .hero-actions .btn.btn-primary,
+.about .cta-section .btn.btn-primary {
+  background-color: #00E676 !important;
+  border-color: #00E676 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 12px 2px rgba(0, 230, 118, 0.40);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.hero .hero-actions .btn.btn-primary:hover,
+.about .cta-section .btn.btn-primary:hover {
+  background-color: #00E676 !important;
+  box-shadow: 0 0 22px 6px rgba(0, 230, 118, 0.75), 0 0 40px 12px rgba(0, 230, 118, 0.30) !important;
+  transform: translateY(-3px);
+}
+
+/* ── Buttons: outline ── */
+.btn-outline,
+.hero .hero-actions .btn.btn-outline,
+.about .cta-section .btn.btn-outline {
+  background-color: transparent !important;
+  border-color: #00E676 !important;
+  color: #00E676 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover,
+.hero .hero-actions .btn.btn-outline:hover,
+.about .cta-section .btn.btn-outline:hover {
+  background-color: #00E676 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 18px 5px rgba(0, 230, 118, 0.65) !important;
+}
+
+/* ── Portfolio card hover glow ── */
+.portfolio .portfolio-wrap {
+  border: 1px solid rgba(0, 230, 118, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portfolio .portfolio-wrap:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 0 22px 5px rgba(0, 230, 118, 0.55), 0 0 45px 10px rgba(0, 230, 118, 0.22) !important;
+  border-color: rgba(0, 230, 118, 0.40) !important;
+}
+
+/* Portfolio filter buttons */
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  color: #00E676 !important;
+  background-color: rgba(0, 230, 118, 0.10) !important;
+  border-left-color: #00E676 !important;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.50);
+}
+
+/* Portfolio action icon buttons */
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a:hover {
+  background-color: #00E676 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 12px 4px rgba(0, 230, 118, 0.70) !important;
+}
+
+/* ── Contact links in About card ── */
+.about .contact-links .contact-item:hover {
+  background-color: #00E676 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 14px 4px rgba(0, 230, 118, 0.55) !important;
+}
+
+/* ── Surface cards — very dark, not pure black, to give subtle depth ── */
+.about .profile-card,
+.resume .resume-side,
+.skills .skills-category,
+.portfolio .filters-wrapper {
+  background-color: #080808 !important;
+  border-color: rgba(0, 230, 118, 0.12) !important;
+}
+
+/* ── Section title decorators ── */
+.section-title h2:before,
+.section-title h2:after {
+  background: #00E676 !important;
+}
+
+/* ── Header container border ── */
+.header .header-container {
+  border: 1px solid rgba(0, 230, 118, 0.18) !important;
+}
+
+/* ── Header toggle button ── */
+.header .header-toggle {
+  background-color: #00E676 !important;
+  color: #000000 !important;
+}
+
+/* ── Scroll to top button ── */
+.scroll-top {
+  background-color: #00E676 !important;
+  color: #000000 !important;
+}
+.scroll-top:hover {
+  box-shadow: 0 0 16px 5px rgba(0, 230, 118, 0.70) !important;
+}
+
+/* ── Footer border ── */
+.footer .copyright {
+  border-top-color: rgba(0, 230, 118, 0.20) !important;
+}
+
+/* ── Preloader spinner ── */
+#preloader:before {
+  border-color: #00E676 transparent #00E676 transparent !important;
+}
+
